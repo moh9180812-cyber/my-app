@@ -1,17 +1,26 @@
-import Home from './Home.js'
-import Header from './Header.js'
-import Footer from './Footer.js'
-import Fun1, {Fun2} from './Data.js'
-// import Data from './Data.js'
+import { Header , Footer , Content } from "./components"
+const appStyle = {
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column",
+    height: "100vh",
+    backgroundColor: "#000000",
+    margin: "0",
+}
+const containerStyle = {
+    width: "90%",
+    height: "100vh",
+    overflow: "hidden"
+}
 function App() {
     return (
-        <>
-          <Header/>
-          <Home/>
-          <Footer/>
-          <Fun1/>
-          <Fun2/>
-        </>
+        <div className="parent" style={appStyle}>
+            <div className="container" style={containerStyle}>
+                <Header/>
+                <Content/>
+                <Footer/>
+            </div>
+        </div>
     )
 }
 export default App 
